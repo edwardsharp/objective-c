@@ -13,6 +13,7 @@
 @end
 
 @implementation MergeViewController
+
 @synthesize firstAsset, secondAsset, audioAsset;
 @synthesize activityView;
 
@@ -28,8 +29,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [activityView stopAnimating];
+    //[activityView setHidden:YES];
+    
 	// Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -88,15 +93,13 @@
     if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         if (isSelectingAssetA){
             NSLog(@"Video A Loaded");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video A Loaded"
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
+            //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video A Loaded" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            //[alert show];
             firstAsset = [AVAsset assetWithURL:[info objectForKey:UIImagePickerControllerMediaURL]];
         } else {
             NSLog(@"Video B Loaded");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video B Loaded"
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
+            //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video B Loaded" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            //[alert show];
             secondAsset = [AVAsset assetWithURL:[info objectForKey:UIImagePickerControllerMediaURL]];
         }
     }
@@ -128,6 +131,10 @@
 }
 
 - (IBAction)mergeAndSave:(id)sender {
+    //wait spinner
+    
+    
+    
     // now letz do the magic!
     if (firstAsset !=nil && secondAsset!=nil) {
         [activityView startAnimating];
@@ -169,6 +176,7 @@
 }
 
 -(void)exportDidFinish:(AVAssetExportSession*)session {
+    
     if (session.status == AVAssetExportSessionStatusCompleted) {
         NSURL *outputURL = session.outputURL;
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
@@ -188,11 +196,13 @@
             }];
         }
     }
+    [activityView stopAnimating];
     //garbage collection
     audioAsset = nil;
     firstAsset = nil;
     secondAsset = nil;
-    [activityView stopAnimating];
+    
 }
+
 
 @end

@@ -31,8 +31,11 @@
 		2B0B10691690F55C00203553 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0B10681690F55C00203553 /* MobileCoreServices.framework */; };
 		2B0B106B1690F56100203553 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0B106A1690F56100203553 /* QuartzCore.framework */; };
 		2B0B106E1691021800203553 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B106D1691021800203553 /* PlayViewController.m */; };
-		2B0B10711691023200203553 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B10701691023200203553 /* RecordViewController.m */; };
+		2B0B10711691023200203553 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B10701691023200203553 /* RecordVideoViewController.m */; };
 		2B0B10741691023F00203553 /* MergeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B10731691023F00203553 /* MergeViewController.m */; };
+		2B0B10761691350700203553 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B10751691350700203553 /* icon-72.png */; };
+		2B0B10781691350B00203553 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B10771691350B00203553 /* icon-72@2x.png */; };
+		2B0B107B16913AB000203553 /* RecordAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B107A16913AB000203553 /* RecordAudioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +80,14 @@
 		2B0B106A1690F56100203553 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2B0B106C1691021800203553 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		2B0B106D1691021800203553 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		2B0B106F1691023200203553 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
-		2B0B10701691023200203553 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		2B0B106F1691023200203553 /* RecordVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
+		2B0B10701691023200203553 /* RecordVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordVideoViewController.m; sourceTree = "<group>"; };
 		2B0B10721691023F00203553 /* MergeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeViewController.h; sourceTree = "<group>"; };
 		2B0B10731691023F00203553 /* MergeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeViewController.m; sourceTree = "<group>"; };
+		2B0B10751691350700203553 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		2B0B10771691350B00203553 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
+		2B0B107916913AB000203553 /* RecordAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAudioViewController.h; sourceTree = "<group>"; };
+		2B0B107A16913AB000203553 /* RecordAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAudioViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +123,8 @@
 		2B0B10131690F52500203553 = {
 			isa = PBXGroup;
 			children = (
+				2B0B10771691350B00203553 /* icon-72@2x.png */,
+				2B0B10751691350700203553 /* icon-72.png */,
 				2B0B106A1690F56100203553 /* QuartzCore.framework */,
 				2B0B10681690F55C00203553 /* MobileCoreServices.framework */,
 				2B0B10661690F55600203553 /* MediaPlayer.framework */,
@@ -161,10 +170,12 @@
 				2B0B10291690F52500203553 /* Supporting Files */,
 				2B0B106C1691021800203553 /* PlayViewController.h */,
 				2B0B106D1691021800203553 /* PlayViewController.m */,
-				2B0B106F1691023200203553 /* RecordViewController.h */,
-				2B0B10701691023200203553 /* RecordViewController.m */,
+				2B0B106F1691023200203553 /* RecordVideoViewController.h */,
+				2B0B10701691023200203553 /* RecordVideoViewController.m */,
 				2B0B10721691023F00203553 /* MergeViewController.h */,
 				2B0B10731691023F00203553 /* MergeViewController.m */,
+				2B0B107916913AB000203553 /* RecordAudioViewController.h */,
+				2B0B107A16913AB000203553 /* RecordAudioViewController.m */,
 			);
 			path = Micronemez;
 			sourceTree = "<group>";
@@ -279,6 +290,8 @@
 				2B0B10391690F52500203553 /* Default-568h@2x.png in Resources */,
 				2B0B103C1690F52500203553 /* MainStoryboard_iPhone.storyboard in Resources */,
 				2B0B103F1690F52500203553 /* MainStoryboard_iPad.storyboard in Resources */,
+				2B0B10761691350700203553 /* icon-72.png in Resources */,
+				2B0B10781691350B00203553 /* icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +330,9 @@
 				2B0B10331690F52500203553 /* AppDelegate.m in Sources */,
 				2B0B10421690F52500203553 /* ViewController.m in Sources */,
 				2B0B106E1691021800203553 /* PlayViewController.m in Sources */,
-				2B0B10711691023200203553 /* RecordViewController.m in Sources */,
+				2B0B10711691023200203553 /* RecordVideoViewController.m in Sources */,
 				2B0B10741691023F00203553 /* MergeViewController.m in Sources */,
+				2B0B107B16913AB000203553 /* RecordAudioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

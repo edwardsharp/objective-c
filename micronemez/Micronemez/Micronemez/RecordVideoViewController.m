@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 futuredeathtoll. All rights reserved.
 //
 
-#import "RecordViewController.h"
+#import "RecordVideoViewController.h"
 
-@interface RecordViewController ()
+@interface RecordVideoViewController ()
 
 @end
 
-@implementation RecordViewController
+@implementation RecordVideoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

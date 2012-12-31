@@ -27,6 +27,8 @@
 - (IBAction)loadAssetB:(id)sender;
 - (IBAction)loadAudio:(id)sender;
 - (IBAction)mergeAndSave:(id)sender;
+- (IBAction)stopSpinning:(id)sender;
+
 -(BOOL)startMediaBrowserFromViewController:(UIViewController*)controller usingDelegate:(id)delegate;
 -(void)exportDidFinish:(AVAssetExportSession*)session;
 

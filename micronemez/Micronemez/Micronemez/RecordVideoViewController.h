@@ -11,7 +11,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface RecordViewController : UIViewController
+@interface RecordVideoViewController : UIViewController
 - (IBAction)recordAndPlay:(id)sender;
 -(BOOL)startCameraControllerFromViewController:(UIViewController*)controller
                                  usingDelegate:(id )delegate;
