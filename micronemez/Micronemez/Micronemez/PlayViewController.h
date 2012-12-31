@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface PlayViewController : UIViewController
+@interface PlayViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (IBAction)playVideo:(id)sender;
+
+//open this sucka up!
+-(BOOL)startMediaBrowserFromViewController:(UIViewController*)controller usingDelegate:(id )delegate;
+
 
 @end
