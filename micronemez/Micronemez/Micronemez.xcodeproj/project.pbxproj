@@ -57,6 +57,9 @@
 		2BC4CEB816929E2A00C6C434 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4CEA816929E2A00C6C434 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2BC4CEB916929E2A00C6C434 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4CEA916929E2A00C6C434 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2BC4CEBA16929E2A00C6C434 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4CEAA16929E2A00C6C434 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2BC4CEC51692DB4300C6C434 /* hexx_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4CEC31692DB4300C6C434 /* hexx_yellow.png */; };
+		2BC4CEC61692DB4300C6C434 /* hexx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4CEC41692DB4300C6C434 /* hexx.png */; };
+		2BC4CEC81692EADF00C6C434 /* icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4CEC71692EADF00C6C434 /* icon-57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,9 @@
 		2BC4CEA816929E2A00C6C434 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = Micronemez/ASIHTTPRequest/ASIHTTPRequest.m; sourceTree = "<group>"; };
 		2BC4CEA916929E2A00C6C434 /* ASIInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = Micronemez/ASIHTTPRequest/ASIInputStream.m; sourceTree = "<group>"; };
 		2BC4CEAA16929E2A00C6C434 /* ASINetworkQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = Micronemez/ASIHTTPRequest/ASINetworkQueue.m; sourceTree = "<group>"; };
+		2BC4CEC31692DB4300C6C434 /* hexx_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexx_yellow.png; sourceTree = "<group>"; };
+		2BC4CEC41692DB4300C6C434 /* hexx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexx.png; sourceTree = "<group>"; };
+		2BC4CEC71692EADF00C6C434 /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 				2BC4CE861692837400C6C434 /* SystemConfiguration.framework */,
 				2BC4CE841692836A00C6C434 /* CFNetwork.framework */,
 				2B0B10771691350B00203553 /* icon-72@2x.png */,
+				2BC4CEC71692EADF00C6C434 /* icon-57.png */,
 				2B0B10751691350700203553 /* icon-72.png */,
 				2B0B106A1690F56100203553 /* QuartzCore.framework */,
 				2B0B10681690F55C00203553 /* MobileCoreServices.framework */,
@@ -253,6 +260,8 @@
 		2B0B10291690F52500203553 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2BC4CEC31692DB4300C6C434 /* hexx_yellow.png */,
+				2BC4CEC41692DB4300C6C434 /* hexx.png */,
 				2B0B102A1690F52500203553 /* Micronemez-Info.plist */,
 				2B0B102B1690F52500203553 /* InfoPlist.strings */,
 				2B0B102E1690F52500203553 /* main.m */,
@@ -363,6 +372,9 @@
 				2B0B10761691350700203553 /* icon-72.png in Resources */,
 				2B0B10781691350B00203553 /* icon-72@2x.png in Resources */,
 				2BC4CE831692834000C6C434 /* ASIHTTPRequest in Resources */,
+				2BC4CEC51692DB4300C6C434 /* hexx_yellow.png in Resources */,
+				2BC4CEC61692DB4300C6C434 /* hexx.png in Resources */,
+				2BC4CEC81692EADF00C6C434 /* icon-57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

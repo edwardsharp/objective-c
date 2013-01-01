@@ -16,6 +16,7 @@
 			<array>
 				<string>icon-72.png</string>
 				<string>icon-72@2x.png</string>
+				<string>icon-57.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -44,19 +45,28 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarHidden</key>
-	<true/>
+	<false/>
 	<key>UIStatusBarHidden~ipad</key>
-	<true/>
+	<false/>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
+	<string>UIStatusBarStyleBlackTranslucent</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
 		<dict>
 			<key>Style</key>
-			<string>UIBarStyleBlack</string>
+			<string>UIBarStyleDefault</string>
+			<key>TintColor</key>
+			<dict>
+				<key>Blue</key>
+				<real>0.0</real>
+				<key>Green</key>
+				<real>0.0</real>
+				<key>Red</key>
+				<real>0.0</real>
+			</dict>
 			<key>Translucent</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>UISupportedInterfaceOrientations</key>
@@ -64,6 +74,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

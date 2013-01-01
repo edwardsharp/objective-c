@@ -79,6 +79,7 @@ usingDelegate:(id )delegate {
                                                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     } else {
+        //#TODO: refactor to use activityIndicator
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SAVED IT!" message:@"Saved to Photo Album"
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
@@ -86,4 +87,8 @@ usingDelegate:(id )delegate {
 }
 
 
+- (void)viewDidUnload {
+    [self setUploadActivityIndicator:nil];
+    [super viewDidUnload];
+}
 @end

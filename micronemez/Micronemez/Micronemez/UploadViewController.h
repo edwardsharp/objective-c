@@ -15,8 +15,10 @@
     ASINetworkQueue *networkQueue;
 }
 - (IBAction)selectUpload:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *selectUpload;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *uploadActivityIndicator;
 - (BOOL)startMediaBrowserFromUploadViewController:(UIViewController*)controller usingDelegate:(id )delegate;
-- (void)doNetworkOperations;
+//- (void)doNetworkOperations;
 
 @property (retain) ASINetworkQueue *networkQueue;
 
