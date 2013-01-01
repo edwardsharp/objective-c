@@ -24,9 +24,13 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 - (IBAction)loadAssetA:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loadAssetA;
 - (IBAction)loadAssetB:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loadAssetB;
 - (IBAction)loadAudio:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loadAudio;
 - (IBAction)mergeAndSave:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *mergeAndSave;
 - (IBAction)stopSpinning:(id)sender;
 
 -(BOOL)startMediaBrowserFromViewController:(UIViewController*)controller usingDelegate:(id)delegate;

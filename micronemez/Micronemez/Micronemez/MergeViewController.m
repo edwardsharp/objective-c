@@ -47,6 +47,9 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR!" message:@"No saved video found! (record some first?)"
                                                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [self.loadAssetA setTitle:@"ERROR!" forState:UIControlStateNormal];
+      
+        
     } else {
         isSelectingAssetA = TRUE;
         [self startMediaBrowserFromViewController:self usingDelegate:self];
@@ -55,9 +58,7 @@
 
 - (IBAction)loadAssetB:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No Saved Album Found"
-                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self.loadAssetB setTitle:@"ERROR!" forState:UIControlStateNormal];
     } else {
         isSelectingAssetA = FALSE;
         [self startMediaBrowserFromViewController:self usingDelegate:self];
@@ -85,21 +86,19 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    // 1 - Get media type
+    // grab media type
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    // 2 - Dismiss image picker
+    // goaway image picker
     [self dismissModalViewControllerAnimated:NO];
-    // 3 - Handle video selection
+    // whatgetzselected voodoo
     if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         if (isSelectingAssetA){
             NSLog(@"Video A Loaded");
-            //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video A Loaded" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            //[alert show];
+            [self.loadAssetA setTitle:@"LOADED" forState:UIControlStateNormal];
             firstAsset = [AVAsset assetWithURL:[info objectForKey:UIImagePickerControllerMediaURL]];
         } else {
             NSLog(@"Video B Loaded");
-            //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Video B Loaded" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            //[alert show];
+            [self.loadAssetB setTitle:@"LOADED" forState:UIControlStateNormal];
             secondAsset = [AVAsset assetWithURL:[info objectForKey:UIImagePickerControllerMediaURL]];
         }
     }
@@ -119,9 +118,7 @@
         NSURL *songURL = [songItem valueForProperty:MPMediaItemPropertyAssetURL];
         audioAsset = [AVAsset assetWithURL:songURL];
         NSLog(@"Audio Loaded");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Asset Loaded" message:@"Audio Loaded"
-                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self.loadAudio setTitle:@"LOADED" forState:UIControlStateNormal];
     }
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -131,13 +128,13 @@
 }
 
 - (IBAction)mergeAndSave:(id)sender {
-    //wait spinner
-    
-    
-    
+ 
     // now letz do the magic!
     if (firstAsset !=nil && secondAsset!=nil) {
+        [self.mergeAndSave setTitle:@"" forState:UIControlStateNormal];
         [activityView startAnimating];
+        //disable the back button on navigation controller
+        self.navigationItem.hidesBackButton = YES;
         // create AVMutableComposition object that holdz AVMutableCompositionTrack instances.
         AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
         // grab the first track
@@ -184,13 +181,14 @@
             [library writeVideoAtPathToSavedPhotosAlbum:outputURL completionBlock:^(NSURL *assetURL, NSError *error){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (error) {
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ohnoz!" message:@"Saving Failed"
-                                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                        [alert show];
+                        [self.mergeAndSave setTitle:@"ERROR!" forState:UIControlStateNormal];
                     } else {
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Video Saved" message:@"Saved To Photo Album"
-                                                                       delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                        [alert show];
+                        [self.mergeAndSave setTitle:@"SAVED" forState:UIControlStateHighlighted];
+                        [self.loadAssetA setHighlighted:YES];
+                        [self.loadAssetB setHighlighted:YES];
+                        [self.loadAudio setHighlighted:YES];
+                        [self.mergeAndSave setHighlighted:YES];
+                        self.navigationItem.hidesBackButton = NO;
                     }
                 });
             }];
@@ -205,4 +203,11 @@
 }
 
 
+- (void)viewDidUnload {
+    [self setLoadAssetA:nil];
+    [self setLoadAssetB:nil];
+    [self setLoadAudio:nil];
+    [self setMergeAndSave:nil];
+    [super viewDidUnload];
+}
 @end
