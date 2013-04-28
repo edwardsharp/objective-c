@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <MediaPlayer/MediaPlayer.h>
+
 @class ASINetworkQueue;
 
 @interface UploadViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {

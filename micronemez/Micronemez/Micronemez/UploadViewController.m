@@ -101,15 +101,44 @@
 	[[self networkQueue] setRequestDidFailSelector:@selector(requestFailed:)];
 	[[self networkQueue] setQueueDidFinishSelector:@selector(queueFinished:)];
     
-    //TODO: move this outta here:
-    [ASICloudFilesRequest setUsername:@"username"];
-    [ASICloudFilesRequest setApiKey:@"put-your-api-key-here"];
+    //lookup the username and apikey from the settingz bundle
+    NSString *apiUsername;
+    NSString *apiKey;
+    NSString *apiContainer;
+    
+    @try
+    {
+        //at the moment this only returnz stringz...
+        apiUsername = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_user_preference"];
+        apiKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_key_preference"];
+        apiContainer = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_container_preference"];
+        //try again!
+        if(apiUsername == nil || apiKey == nil || apiContainer == nil)
+        {
+            [self registerDefaultsFromSettingsBundle];
+            apiUsername = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_user_preference"];
+            apiKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_key_preference"];
+            apiContainer = [[NSUserDefaults standardUserDefaults] stringForKey:@"api_container_preference"];
+            
+        } else
+        {
+            //@throw [NSException exceptionWithName:nil reason:@"Key not found" userInfo:nil];
+        }
+        NSLog(@"APIUSERNAME: %@", apiUsername);
+        NSLog(@"APIKEY: %@", apiKey);
+        NSLog(@"APICONTAINER: %@", apiContainer);
+    } @catch (NSException *err) {
+        NSLog(@"EXCEPTION, CANNOT GET PREF DEFAUT");
+    }
+    
+    [ASICloudFilesRequest setUsername:apiUsername];
+    [ASICloudFilesRequest setApiKey:apiKey];
     [ASICloudFilesRequest authenticate];
     
     //[info objectForKey:UIImagePickerControllerMediaURL];
     
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    NSLog(mediaType);
+    //NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    //NSLog(mediaType);
     
     NSURL *urlvideo = [info objectForKey:UIImagePickerControllerMediaURL];
     
@@ -128,7 +157,7 @@
     NSLog(@"contentType: %@", contentType);
     
     ASICloudFilesObjectRequest *request =
-    [ASICloudFilesObjectRequest putObjectRequestWithContainer:@"some-container" objectPath:fileNameString contentType:contentType file:urlString  metadata:nil etag:nil];
+    [ASICloudFilesObjectRequest putObjectRequestWithContainer:apiContainer objectPath:fileNameString contentType:contentType file:urlString  metadata:nil etag:nil];
     
     //yeah network queuez!
     [[self networkQueue] addOperation:request];
@@ -189,4 +218,45 @@
     [self setSelectUpload:nil];
     [super viewDidUnload];
 }
+
+- (NSString*)getSettingFromBundle:(NSString*)settingsName
+{
+	NSString *pathStr = [[NSBundle mainBundle] bundlePath];
+	NSString *settingsBundlePath = [pathStr stringByAppendingPathComponent:@"Settings.bundle"];
+	NSString *finalPath = [settingsBundlePath stringByAppendingPathComponent:@"Root.plist"];
+    
+	NSDictionary *settingsDict = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+	NSArray *prefSpecifierArray = [settingsDict objectForKey:@"PreferenceSpecifiers"];
+	NSDictionary *prefItem;
+	for (prefItem in prefSpecifierArray)
+	{
+		if ([[prefItem objectForKey:@"Key"] isEqualToString:settingsName])
+			return [prefItem objectForKey:@"DefaultValue"];
+	}
+	return nil;
+    
+}
+
+- (void)registerDefaultsFromSettingsBundle {
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle) {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+    //[defaultsToRegister release];
+}
+
 @end
