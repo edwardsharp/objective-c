@@ -13,6 +13,8 @@
 		2BB9621B19AAC0660024D17F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9621919AAC0660024D17F /* Main.storyboard */; };
 		2BB9621D19AAC0660024D17F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB9621C19AAC0660024D17F /* Images.xcassets */; };
 		2BB9622919AAC0660024D17F /* OrangeSeqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9622819AAC0660024D17F /* OrangeSeqTests.swift */; };
+		2BB9623319AAC5610024D17F /* CircularSlideDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */; };
+		2BB9623519AAC7200024D17F /* CircularButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		2BB9622219AAC0660024D17F /* OrangeSeqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrangeSeqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB9622719AAC0660024D17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB9622819AAC0660024D17F /* OrangeSeqTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeSeqTests.swift; sourceTree = "<group>"; };
+		2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlideDesign.swift; sourceTree = "<group>"; };
+		2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButtonDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				2BB9621C19AAC0660024D17F /* Images.xcassets */,
 				2BB9621419AAC0660024D17F /* OrangeSeq.xcdatamodeld */,
 				2BB9621019AAC0660024D17F /* Supporting Files */,
+				2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */,
+				2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */,
 			);
 			path = OrangeSeq;
 			sourceTree = "<group>";
@@ -211,9 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB9623319AAC5610024D17F /* CircularSlideDesign.swift in Sources */,
 				2BB9621819AAC0660024D17F /* ViewController.swift in Sources */,
 				2BB9621319AAC0660024D17F /* AppDelegate.swift in Sources */,
 				2BB9621619AAC0660024D17F /* OrangeSeq.xcdatamodeld in Sources */,
+				2BB9623519AAC7200024D17F /* CircularButtonDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
