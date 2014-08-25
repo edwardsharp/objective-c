@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cuJ-pK-gUA" customClass="CircularSlideDesign" customModule="OrangeSeq" customModuleProvider="target">
-                                <rect key="frame" x="100" y="100" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuJ-pK-gUA" customClass="CircularSlideDesign" customModule="OrangeSeq" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7F-sj-AJD" customClass="CircularButtonDesign" customModule="OrangeSeq" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="100" width="100" height="100"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7F-sj-AJD" customClass="CircularButtonDesign" customModule="OrangeSeq" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="140" width="100" height="100"/>
                                         <gestureRecognizers/>
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,11 +39,105 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="roundButtonTouchDown" destination="BYZ-38-t0r" eventType="touchDown" id="RxC-Gc-3GM"/>
+                                            <action selector="roundButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tql-cM-G6Y"/>
                                             <outletCollection property="gestureRecognizers" destination="tnh-Dx-821" appends="YES" id="NV0-eR-11u"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-22-2cp">
+                                        <rect key="frame" x="122" y="165" width="16" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="905-e0-2Vm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xVal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xa-Xx-g3D">
+                                        <rect key="frame" x="136" y="165" width="50" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="H4G-LY-tMr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVC-YS-vbY">
+                                        <rect key="frame" x="122" y="194" width="15" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="Ol7-cT-O0q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yVal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMX-gY-OxE">
+                                        <rect key="frame" x="136" y="194" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UH3-dQ-D73">
+                                        <rect key="frame" x="126" y="58" width="51" height="31"/>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="165" id="0og-UE-Qt2"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="top" secondItem="LVq-22-2cp" secondAttribute="bottom" constant="8" symbolic="YES" id="0ru-Jr-sQ7"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="136" id="1qx-GM-rhQ"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="top" secondItem="8xa-Xx-g3D" secondAttribute="bottom" constant="8" symbolic="YES" id="30H-eT-Vlx"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="194" id="3Ts-1p-yiM"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="126" id="4AF-lj-MaY"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="baseline" secondItem="vMX-gY-OxE" secondAttribute="baseline" id="53T-qr-JlU"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="top" secondItem="8xa-Xx-g3D" secondAttribute="bottom" constant="8" id="7YM-M7-lja"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="58" id="9TZ-rE-rlT"/>
+                                    <constraint firstAttribute="bottom" secondItem="vMX-gY-OxE" secondAttribute="bottom" constant="85" id="9qP-Dg-5IH"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="bottom" secondItem="LVq-22-2cp" secondAttribute="bottom" id="A9K-Mf-oBZ"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="centerX" secondItem="J7F-sj-AJD" secondAttribute="centerX" id="BH3-ak-eIU"/>
+                                    <constraint firstAttribute="bottom" secondItem="LVq-22-2cp" secondAttribute="bottom" constant="114" id="Bqh-Bc-UKj"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="100" id="CGm-ge-GcU"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="top" secondItem="UH3-dQ-D73" secondAttribute="bottom" constant="76" id="DwS-HQ-rr9"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="126" id="E6V-T0-jEe"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="136" id="Exl-tT-N91"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="centerY" secondItem="vMX-gY-OxE" secondAttribute="centerY" id="F7R-LI-5T6"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="122" id="HEc-G9-fQR"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVC-YS-vbY" secondAttribute="bottom" constant="85" id="HfX-uu-BfK"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="top" secondItem="8xa-Xx-g3D" secondAttribute="top" id="KE5-Jg-7OA"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="122" id="KGV-5q-MbZ"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="centerY" secondItem="8xa-Xx-g3D" secondAttribute="centerY" id="LZp-4g-ru2"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="centerX" secondItem="cuJ-pK-gUA" secondAttribute="centerX" id="Lpz-6d-2wo"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="leading" secondItem="xVC-YS-vbY" secondAttribute="leading" id="Non-Cz-UCR"/>
+                                    <constraint firstAttribute="bottom" secondItem="J7F-sj-AJD" secondAttribute="bottom" constant="60" id="OI3-OK-7ix"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="140" id="Od3-Dv-LxV"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="top" secondItem="8xa-Xx-g3D" secondAttribute="bottom" constant="8" symbolic="YES" id="OiJ-iQ-J1O"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVC-YS-vbY" secondAttribute="bottom" constant="85" id="PEv-Ov-gdi"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="top" secondItem="xVC-YS-vbY" secondAttribute="top" id="S00-cs-gvJ"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="top" secondItem="UH3-dQ-D73" secondAttribute="bottom" constant="51" id="S0y-Pc-tc7"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="136" id="S9w-k4-epF"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="top" secondItem="LVq-22-2cp" secondAttribute="bottom" constant="8" id="SCZ-FN-Qgo"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="firstBaseline" secondItem="8xa-Xx-g3D" secondAttribute="firstBaseline" id="U3Z-uf-uB4"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="centerX" secondItem="cuJ-pK-gUA" secondAttribute="centerX" id="UDm-R7-FfQ"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="122" id="ase-uy-q0B"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="leading" secondItem="vMX-gY-OxE" secondAttribute="leading" id="c3R-2V-Fag"/>
+                                    <constraint firstAttribute="bottom" secondItem="8xa-Xx-g3D" secondAttribute="bottom" constant="114" id="cAk-Mg-piM"/>
+                                    <constraint firstAttribute="bottom" secondItem="vMX-gY-OxE" secondAttribute="bottom" constant="85" id="dBh-4s-QY6"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="140" id="h7w-s8-eJm"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="centerX" secondItem="vMX-gY-OxE" secondAttribute="centerX" id="iXJ-KX-268"/>
+                                    <constraint firstItem="8xa-Xx-g3D" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="165" id="j8v-Ox-EQD"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="194" id="jp8-mk-BeS"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="bottom" secondItem="xVC-YS-vbY" secondAttribute="bottom" id="kFo-Y6-Ab3"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="top" secondItem="UH3-dQ-D73" secondAttribute="bottom" constant="76" id="kHt-X1-9FG"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="122" id="kdT-7q-Uxa"/>
+                                    <constraint firstItem="J7F-sj-AJD" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="100" id="lB1-nh-5hl"/>
+                                    <constraint firstItem="LVq-22-2cp" firstAttribute="baseline" secondItem="8xa-Xx-g3D" secondAttribute="baseline" id="nkn-BV-G5t"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="top" secondItem="LVq-22-2cp" secondAttribute="bottom" constant="8" symbolic="YES" id="tHc-T0-lfg"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="trailing" secondItem="8xa-Xx-g3D" secondAttribute="trailing" id="uBT-UJ-YJ5"/>
+                                    <constraint firstItem="xVC-YS-vbY" firstAttribute="firstBaseline" secondItem="vMX-gY-OxE" secondAttribute="firstBaseline" id="uQz-MT-M3y"/>
+                                    <constraint firstItem="vMX-gY-OxE" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="leading" constant="136" id="ucM-Yf-jel"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="58" id="wHP-x1-Lmd"/>
+                                    <constraint firstItem="UH3-dQ-D73" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="top" constant="58" id="wmE-8n-SP2"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,19 +146,27 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="150"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cuJ-pK-gUA" secondAttribute="centerX" id="5Dg-mb-WdI"/>
+                            <constraint firstAttribute="centerY" secondItem="cuJ-pK-gUA" secondAttribute="centerY" id="yWr-dO-XfM"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="aSwitch" destination="UH3-dQ-D73" id="uMv-DP-Vgp"/>
+                        <outlet property="roundButton" destination="J7F-sj-AJD" id="tei-9l-5an"/>
                         <outlet property="roundButtonGesture" destination="tnh-Dx-821" id="SHg-mh-iGF"/>
+                        <outlet property="xVal" destination="8xa-Xx-g3D" id="KSd-tp-9bW"/>
+                        <outlet property="yVal" destination="vMX-gY-OxE" id="m5z-cN-Azc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tnh-Dx-821">
+                <pongPressGestureRecognizer allowableMovement="500" minimumPressDuration="0.25" id="tnh-Dx-821">
                     <connections>
                         <action selector="roundButtonGestureAction:" destination="BYZ-38-t0r" id="uXi-9r-Afd"/>
                     </connections>
