@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BD12AA6188C3993000C21BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AA5188C3993000C21BB /* Foundation.framework */; };
+		2BD12AA8188C3993000C21BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AA7188C3993000C21BB /* CoreGraphics.framework */; };
+		2BD12AAA188C3993000C21BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AA9188C3993000C21BB /* UIKit.framework */; };
+		2BD12AAC188C3993000C21BB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AAB188C3993000C21BB /* CoreData.framework */; };
+		2BD12AB2188C3993000C21BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD12AB0188C3993000C21BB /* InfoPlist.strings */; };
+		2BD12AB4188C3993000C21BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12AB3188C3993000C21BB /* main.m */; };
+		2BD12AB8188C3993000C21BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12AB7188C3993000C21BB /* AppDelegate.m */; };
+		2BD12ABB188C3993000C21BB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD12AB9188C3993000C21BB /* Main_iPhone.storyboard */; };
+		2BD12ABE188C3993000C21BB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD12ABC188C3993000C21BB /* Main_iPad.storyboard */; };
+		2BD12AC1188C3993000C21BB /* PiVideoControl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12ABF188C3993000C21BB /* PiVideoControl.xcdatamodeld */; };
+		2BD12AC4188C3993000C21BB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12AC3188C3993000C21BB /* MasterViewController.m */; };
+		2BD12AC7188C3993000C21BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12AC6188C3993000C21BB /* DetailViewController.m */; };
+		2BD12AC9188C3994000C21BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD12AC8188C3994000C21BB /* Images.xcassets */; };
+		2BD12AD0188C3994000C21BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12ACF188C3994000C21BB /* XCTest.framework */; };
+		2BD12AD1188C3994000C21BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AA5188C3993000C21BB /* Foundation.framework */; };
+		2BD12AD2188C3994000C21BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AA9188C3993000C21BB /* UIKit.framework */; };
+		2BD12AD3188C3994000C21BB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12AAB188C3993000C21BB /* CoreData.framework */; };
+		2BD12ADB188C3994000C21BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD12AD9188C3994000C21BB /* InfoPlist.strings */; };
+		2BD12ADD188C3994000C21BB /* PiVideoControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD12ADC188C3994000C21BB /* PiVideoControlTests.m */; };
+		2BD12B0E188C3C7B000C21BB /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12B09188C3B5C000C21BB /* libVVBasics.a */; };
+		2BD12B0F188C3C7F000C21BB /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD12B0B188C3B5C000C21BB /* libVVOSC.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BD12AD4188C3994000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12A9A188C3993000C21BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD12AA1188C3993000C21BB;
+			remoteInfo = PiVideoControl;
+		};
+		2BD12AF6188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961EA8ED100E8565007E6C25;
+			remoteInfo = VVBasics;
+		};
+		2BD12AF8188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961745F4100F86B400FB60E6;
+			remoteInfo = VVMIDI;
+		};
+		2BD12AFA188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D0C5100E89F700C3944E;
+			remoteInfo = VVOSC;
+		};
+		2BD12AFC188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 968FAA86108B6141000E470D;
+			remoteInfo = CrashReporterTestApp;
+		};
+		2BD12AFE188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9656D900100F89BA0064EEA6;
+			remoteInfo = MIDITestApp;
+		};
+		2BD12B00188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D179100E8B4D00C3944E;
+			remoteInfo = OSCTestApp;
+		};
+		2BD12B02188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B49302106AEB4C008FB26E;
+			remoteInfo = MIDIviaOSC;
+		};
+		2BD12B04188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 966CCBD81431EFB9006D580F;
+			remoteInfo = OSCQueryTest;
+		};
+		2BD12B06188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96ACD7211706416300138AE6;
+			remoteInfo = OSCPingTester;
+		};
+		2BD12B08188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C2D185A1A740082DE35;
+			remoteInfo = VVBasicsStatic;
+		};
+		2BD12B0A188C3B5C000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C3E185A1A7D0082DE35;
+			remoteInfo = VVOSCStatic;
+		};
+		2BD12B0C188C3C65000C21BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A7EEB185BA3100075DEB1;
+			remoteInfo = "Build iOS static libs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BD12AA2188C3993000C21BB /* PiVideoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiVideoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD12AA5188C3993000C21BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2BD12AA7188C3993000C21BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BD12AA9188C3993000C21BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2BD12AAB188C3993000C21BB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2BD12AAF188C3993000C21BB /* PiVideoControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PiVideoControl-Info.plist"; sourceTree = "<group>"; };
+		2BD12AB1188C3993000C21BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BD12AB3188C3993000C21BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BD12AB5188C3993000C21BB /* PiVideoControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiVideoControl-Prefix.pch"; sourceTree = "<group>"; };
+		2BD12AB6188C3993000C21BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BD12AB7188C3993000C21BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BD12ABA188C3993000C21BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		2BD12ABD188C3993000C21BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		2BD12AC0188C3993000C21BB /* PiVideoControl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PiVideoControl.xcdatamodel; sourceTree = "<group>"; };
+		2BD12AC2188C3993000C21BB /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		2BD12AC3188C3993000C21BB /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		2BD12AC5188C3993000C21BB /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2BD12AC6188C3993000C21BB /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2BD12AC8188C3994000C21BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2BD12ACE188C3994000C21BB /* PiVideoControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiVideoControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD12ACF188C3994000C21BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2BD12AD8188C3994000C21BB /* PiVideoControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PiVideoControlTests-Info.plist"; sourceTree = "<group>"; };
+		2BD12ADA188C3994000C21BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BD12ADC188C3994000C21BB /* PiVideoControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiVideoControlTests.m; sourceTree = "<group>"; };
+		2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VVOpenSource.xcodeproj; path = ../../vvopensource/VVOpenSource.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BD12A9F188C3993000C21BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12B0F188C3C7F000C21BB /* libVVOSC.a in Frameworks */,
+				2BD12B0E188C3C7B000C21BB /* libVVBasics.a in Frameworks */,
+				2BD12AA8188C3993000C21BB /* CoreGraphics.framework in Frameworks */,
+				2BD12AAC188C3993000C21BB /* CoreData.framework in Frameworks */,
+				2BD12AAA188C3993000C21BB /* UIKit.framework in Frameworks */,
+				2BD12AA6188C3993000C21BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD12ACB188C3994000C21BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12AD0188C3994000C21BB /* XCTest.framework in Frameworks */,
+				2BD12AD3188C3994000C21BB /* CoreData.framework in Frameworks */,
+				2BD12AD2188C3994000C21BB /* UIKit.framework in Frameworks */,
+				2BD12AD1188C3994000C21BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BD12A99188C3993000C21BB = {
+			isa = PBXGroup;
+			children = (
+				2BD12AAD188C3993000C21BB /* PiVideoControl */,
+				2BD12AD6188C3994000C21BB /* PiVideoControlTests */,
+				2BD12AA4188C3993000C21BB /* Frameworks */,
+				2BD12AA3188C3993000C21BB /* Products */,
+				2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		2BD12AA3188C3993000C21BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AA2188C3993000C21BB /* PiVideoControl.app */,
+				2BD12ACE188C3994000C21BB /* PiVideoControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BD12AA4188C3993000C21BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AA5188C3993000C21BB /* Foundation.framework */,
+				2BD12AA7188C3993000C21BB /* CoreGraphics.framework */,
+				2BD12AA9188C3993000C21BB /* UIKit.framework */,
+				2BD12AAB188C3993000C21BB /* CoreData.framework */,
+				2BD12ACF188C3994000C21BB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BD12AAD188C3993000C21BB /* PiVideoControl */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AB6188C3993000C21BB /* AppDelegate.h */,
+				2BD12AB7188C3993000C21BB /* AppDelegate.m */,
+				2BD12AB9188C3993000C21BB /* Main_iPhone.storyboard */,
+				2BD12ABC188C3993000C21BB /* Main_iPad.storyboard */,
+				2BD12AC2188C3993000C21BB /* MasterViewController.h */,
+				2BD12AC3188C3993000C21BB /* MasterViewController.m */,
+				2BD12AC5188C3993000C21BB /* DetailViewController.h */,
+				2BD12AC6188C3993000C21BB /* DetailViewController.m */,
+				2BD12AC8188C3994000C21BB /* Images.xcassets */,
+				2BD12ABF188C3993000C21BB /* PiVideoControl.xcdatamodeld */,
+				2BD12AAE188C3993000C21BB /* Supporting Files */,
+			);
+			path = PiVideoControl;
+			sourceTree = "<group>";
+		};
+		2BD12AAE188C3993000C21BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AAF188C3993000C21BB /* PiVideoControl-Info.plist */,
+				2BD12AB0188C3993000C21BB /* InfoPlist.strings */,
+				2BD12AB3188C3993000C21BB /* main.m */,
+				2BD12AB5188C3993000C21BB /* PiVideoControl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BD12AD6188C3994000C21BB /* PiVideoControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12ADC188C3994000C21BB /* PiVideoControlTests.m */,
+				2BD12AD7188C3994000C21BB /* Supporting Files */,
+			);
+			path = PiVideoControlTests;
+			sourceTree = "<group>";
+		};
+		2BD12AD7188C3994000C21BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AD8188C3994000C21BB /* PiVideoControlTests-Info.plist */,
+				2BD12AD9188C3994000C21BB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BD12AE7188C3B5C000C21BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BD12AF7188C3B5C000C21BB /* VVBasics.framework */,
+				2BD12AF9188C3B5C000C21BB /* VVMIDI.framework */,
+				2BD12AFB188C3B5C000C21BB /* VVOSC.framework */,
+				2BD12AFD188C3B5C000C21BB /* CrashReporterTestApp.app */,
+				2BD12AFF188C3B5C000C21BB /* MIDITestApp.app */,
+				2BD12B01188C3B5C000C21BB /* OSCTestApp.app */,
+				2BD12B03188C3B5C000C21BB /* MIDIviaOSC.app */,
+				2BD12B05188C3B5C000C21BB /* OSCQueryTest.app */,
+				2BD12B07188C3B5C000C21BB /* OSCPingTester.app */,
+				2BD12B09188C3B5C000C21BB /* libVVBasics.a */,
+				2BD12B0B188C3B5C000C21BB /* libVVOSC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BD12AA1188C3993000C21BB /* PiVideoControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD12AE0188C3994000C21BB /* Build configuration list for PBXNativeTarget "PiVideoControl" */;
+			buildPhases = (
+				2BD12A9E188C3993000C21BB /* Sources */,
+				2BD12A9F188C3993000C21BB /* Frameworks */,
+				2BD12AA0188C3993000C21BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BD12B0D188C3C65000C21BB /* PBXTargetDependency */,
+			);
+			name = PiVideoControl;
+			productName = PiVideoControl;
+			productReference = 2BD12AA2188C3993000C21BB /* PiVideoControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BD12ACD188C3994000C21BB /* PiVideoControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD12AE3188C3994000C21BB /* Build configuration list for PBXNativeTarget "PiVideoControlTests" */;
+			buildPhases = (
+				2BD12ACA188C3994000C21BB /* Sources */,
+				2BD12ACB188C3994000C21BB /* Frameworks */,
+				2BD12ACC188C3994000C21BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BD12AD5188C3994000C21BB /* PBXTargetDependency */,
+			);
+			name = PiVideoControlTests;
+			productName = PiVideoControlTests;
+			productReference = 2BD12ACE188C3994000C21BB /* PiVideoControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BD12A9A188C3993000C21BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = edwardsharp;
+				TargetAttributes = {
+					2BD12ACD188C3994000C21BB = {
+						TestTargetID = 2BD12AA1188C3993000C21BB;
+					};
+				};
+			};
+			buildConfigurationList = 2BD12A9D188C3993000C21BB /* Build configuration list for PBXProject "PiVideoControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BD12A99188C3993000C21BB;
+			productRefGroup = 2BD12AA3188C3993000C21BB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2BD12AE7188C3B5C000C21BB /* Products */;
+					ProjectRef = 2BD12AE6188C3B5C000C21BB /* VVOpenSource.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2BD12AA1188C3993000C21BB /* PiVideoControl */,
+				2BD12ACD188C3994000C21BB /* PiVideoControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2BD12AF7188C3B5C000C21BB /* VVBasics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBasics.framework;
+			remoteRef = 2BD12AF6188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12AF9188C3B5C000C21BB /* VVMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVMIDI.framework;
+			remoteRef = 2BD12AF8188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12AFB188C3B5C000C21BB /* VVOSC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVOSC.framework;
+			remoteRef = 2BD12AFA188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12AFD188C3B5C000C21BB /* CrashReporterTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CrashReporterTestApp.app;
+			remoteRef = 2BD12AFC188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12AFF188C3B5C000C21BB /* MIDITestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDITestApp.app;
+			remoteRef = 2BD12AFE188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B01188C3B5C000C21BB /* OSCTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCTestApp.app;
+			remoteRef = 2BD12B00188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B03188C3B5C000C21BB /* MIDIviaOSC.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDIviaOSC.app;
+			remoteRef = 2BD12B02188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B05188C3B5C000C21BB /* OSCQueryTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCQueryTest.app;
+			remoteRef = 2BD12B04188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B07188C3B5C000C21BB /* OSCPingTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCPingTester.app;
+			remoteRef = 2BD12B06188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B09188C3B5C000C21BB /* libVVBasics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVBasics.a;
+			remoteRef = 2BD12B08188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BD12B0B188C3B5C000C21BB /* libVVOSC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVOSC.a;
+			remoteRef = 2BD12B0A188C3B5C000C21BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BD12AA0188C3993000C21BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12ABE188C3993000C21BB /* Main_iPad.storyboard in Resources */,
+				2BD12AC9188C3994000C21BB /* Images.xcassets in Resources */,
+				2BD12ABB188C3993000C21BB /* Main_iPhone.storyboard in Resources */,
+				2BD12AB2188C3993000C21BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD12ACC188C3994000C21BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12ADB188C3994000C21BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BD12A9E188C3993000C21BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12AC7188C3993000C21BB /* DetailViewController.m in Sources */,
+				2BD12AC4188C3993000C21BB /* MasterViewController.m in Sources */,
+				2BD12AB8188C3993000C21BB /* AppDelegate.m in Sources */,
+				2BD12AB4188C3993000C21BB /* main.m in Sources */,
+				2BD12AC1188C3993000C21BB /* PiVideoControl.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD12ACA188C3994000C21BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD12ADD188C3994000C21BB /* PiVideoControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BD12AD5188C3994000C21BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD12AA1188C3993000C21BB /* PiVideoControl */;
+			targetProxy = 2BD12AD4188C3994000C21BB /* PBXContainerItemProxy */;
+		};
+		2BD12B0D188C3C65000C21BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Build iOS static libs";
+			targetProxy = 2BD12B0C188C3C65000C21BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BD12AB0188C3993000C21BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD12AB1188C3993000C21BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2BD12AB9188C3993000C21BB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD12ABA188C3993000C21BB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		2BD12ABC188C3993000C21BB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD12ABD188C3993000C21BB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		2BD12AD9188C3994000C21BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD12ADA188C3994000C21BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BD12ADE188C3994000C21BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BD12ADF188C3994000C21BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BD12AE1188C3994000C21BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiVideoControl/PiVideoControl-Prefix.pch";
+				INFOPLIST_FILE = "PiVideoControl/PiVideoControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2BD12AE2188C3994000C21BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiVideoControl/PiVideoControl-Prefix.pch";
+				INFOPLIST_FILE = "PiVideoControl/PiVideoControl-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2BD12AE4188C3994000C21BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PiVideoControl.app/PiVideoControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiVideoControl/PiVideoControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PiVideoControlTests/PiVideoControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2BD12AE5188C3994000C21BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PiVideoControl.app/PiVideoControl";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiVideoControl/PiVideoControl-Prefix.pch";
+				INFOPLIST_FILE = "PiVideoControlTests/PiVideoControlTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BD12A9D188C3993000C21BB /* Build configuration list for PBXProject "PiVideoControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD12ADE188C3994000C21BB /* Debug */,
+				2BD12ADF188C3994000C21BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD12AE0188C3994000C21BB /* Build configuration list for PBXNativeTarget "PiVideoControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD12AE1188C3994000C21BB /* Debug */,
+				2BD12AE2188C3994000C21BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD12AE3188C3994000C21BB /* Build configuration list for PBXNativeTarget "PiVideoControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD12AE4188C3994000C21BB /* Debug */,
+				2BD12AE5188C3994000C21BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BD12ABF188C3993000C21BB /* PiVideoControl.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BD12AC0188C3993000C21BB /* PiVideoControl.xcdatamodel */,
+			);
+			currentVersion = 2BD12AC0188C3993000C21BB /* PiVideoControl.xcdatamodel */;
+			path = PiVideoControl.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BD12A9A188C3993000C21BB /* Project object */;
+}
