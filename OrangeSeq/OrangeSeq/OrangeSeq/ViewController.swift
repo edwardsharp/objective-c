@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var width = 320.0
     var height = 560.0
+    
+    var buttons = [String]()
     
     @IBOutlet var roundButtonGesture: UILongPressGestureRecognizer!
     
@@ -58,6 +60,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func bank1button1RefGestureAction(sender: UILongPressGestureRecognizer) {
         defaultButtonGestureAction(sender, button: bank1button1)
     }
+    
+    //MARK - CollectionView stuffz
+    
+    
     
     
     // MARK - DEFAULT BUTTON ACTIONS
@@ -110,6 +116,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         var sizeRect = UIScreen.mainScreen().applicationFrame;
         width = Double(sizeRect.size.width)
         height = Double(sizeRect.size.height)
+        
+        
+        buttons = ["one", "two", "three", "four", "five", "six"]
     }
 
     func setYProgressViewRot(){
@@ -127,6 +136,18 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    //PRAGMA MARK - CollectionView stuffz
+    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int
+    {
+        return buttons.count
+    }
+    
+    func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell!
+    {
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as ButtonCollectionViewCell
+        //buttons[indexPath.row]
+        return cell
+    }
 
 }
 

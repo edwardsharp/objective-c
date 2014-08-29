@@ -15,6 +15,7 @@
 		2BB9622919AAC0660024D17F /* OrangeSeqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9622819AAC0660024D17F /* OrangeSeqTests.swift */; };
 		2BB9623319AAC5610024D17F /* CircularSlideDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */; };
 		2BB9623519AAC7200024D17F /* CircularButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */; };
+		2BED49A019AB1EB90005264D /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED499F19AB1EB90005264D /* ButtonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2BB9622819AAC0660024D17F /* OrangeSeqTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeSeqTests.swift; sourceTree = "<group>"; };
 		2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlideDesign.swift; sourceTree = "<group>"; };
 		2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButtonDesign.swift; sourceTree = "<group>"; };
+		2BED499F19AB1EB90005264D /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				2BB9621019AAC0660024D17F /* Supporting Files */,
 				2BB9623219AAC5610024D17F /* CircularSlideDesign.swift */,
 				2BB9623419AAC7200024D17F /* CircularButtonDesign.swift */,
+				2BED499F19AB1EB90005264D /* ButtonCollectionViewCell.swift */,
 			);
 			path = OrangeSeq;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				2BB9621819AAC0660024D17F /* ViewController.swift in Sources */,
 				2BB9621319AAC0660024D17F /* AppDelegate.swift in Sources */,
 				2BB9621619AAC0660024D17F /* OrangeSeq.xcdatamodeld in Sources */,
+				2BED49A019AB1EB90005264D /* ButtonCollectionViewCell.swift in Sources */,
 				2BB9623519AAC7200024D17F /* CircularButtonDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

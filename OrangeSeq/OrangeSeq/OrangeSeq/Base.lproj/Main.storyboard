@@ -46,6 +46,7 @@
                                         <connections>
                                             <action selector="roundButtonTouchDown" destination="BYZ-38-t0r" eventType="touchDown" id="RxC-Gc-3GM"/>
                                             <action selector="roundButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tql-cM-G6Y"/>
+                                            <action selector="touchDragEvent:" destination="BYZ-38-t0r" eventType="touchDragExit" id="HOe-MX-Ypf"/>
                                             <outletCollection property="gestureRecognizers" destination="tnh-Dx-821" appends="YES" id="NV0-eR-11u"/>
                                         </connections>
                                     </button>
@@ -190,23 +191,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m77-6X-SCD" customClass="CircularSlideDesign" customModule="OrangeSeq" customModuleProvider="target">
-                                <rect key="frame" x="162" y="216" width="436" height="187"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCU-8O-31m" customClass="CircularSlideDesign" customModule="OrangeSeq" customModuleProvider="target">
-                                <rect key="frame" x="162" y="411" width="436" height="187"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCU-8O-31m" customClass="CircularSlideDesign" customModule="OrangeSeq" customModuleProvider="target">
+                                <rect key="frame" x="162" y="215" width="436" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -292,18 +278,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m77-6X-SCD" firstAttribute="leading" secondItem="4zX-co-fjc" secondAttribute="leading" id="3Xp-qw-RN5"/>
-                            <constraint firstItem="mCU-8O-31m" firstAttribute="leading" secondItem="m77-6X-SCD" secondAttribute="leading" id="6Za-Ub-ABT"/>
-                            <constraint firstItem="m77-6X-SCD" firstAttribute="top" secondItem="4zX-co-fjc" secondAttribute="bottom" constant="9" id="AFT-Dp-nhD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4zX-co-fjc" secondAttribute="trailing" constant="-14" id="DCW-pG-8EA"/>
                             <constraint firstItem="cuJ-pK-gUA" firstAttribute="bottom" secondItem="mCU-8O-31m" secondAttribute="bottom" id="ESX-9b-bnh"/>
-                            <constraint firstItem="m77-6X-SCD" firstAttribute="trailing" secondItem="mCU-8O-31m" secondAttribute="trailing" id="PvW-bW-oNP"/>
-                            <constraint firstItem="m77-6X-SCD" firstAttribute="trailing" secondItem="4zX-co-fjc" secondAttribute="trailing" id="TBq-oq-aVi"/>
                             <constraint firstItem="4zX-co-fjc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UY8-rs-FGN"/>
-                            <constraint firstItem="mCU-8O-31m" firstAttribute="top" secondItem="m77-6X-SCD" secondAttribute="bottom" constant="8" symbolic="YES" id="XcO-3w-ZtT"/>
                             <constraint firstItem="4zX-co-fjc" firstAttribute="leading" secondItem="cuJ-pK-gUA" secondAttribute="trailing" constant="6" id="XuW-2b-ELA"/>
                             <constraint firstItem="cuJ-pK-gUA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="Yje-Uw-zQD"/>
-                            <constraint firstItem="m77-6X-SCD" firstAttribute="centerY" secondItem="cuJ-pK-gUA" secondAttribute="centerY" id="eRh-Sr-zPk"/>
                             <constraint firstItem="cuJ-pK-gUA" firstAttribute="top" secondItem="4zX-co-fjc" secondAttribute="top" id="fwh-bE-rNr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cuJ-pK-gUA" secondAttribute="bottom" constant="2" id="ozZ-ik-dl4"/>
                         </constraints>
