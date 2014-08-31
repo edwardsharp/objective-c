@@ -89,7 +89,49 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         
     }
-
+//
+//    func insertNewObjectWithValues(tag:Int, value:String) {
+//        
+//        let context = self.fetchedResultsController.managedObjectContext
+//        let entity = self.fetchedResultsController.fetchRequest.entity
+//        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name, inManagedObjectContext: context) as NSManagedObject
+//        
+//        //check if more than one OrangePi in index, and ifso, set the name with the next index count
+//        if  self.fetchedResultsController.fetchedObjects.count > 0{
+//            let nextPiName = "OrangePi " + String(self.fetchedResultsController.fetchedObjects.count)
+//            newManagedObject.setValue(nextPiName, forKey: "name")
+//            
+//            
+//        }else {
+//            newManagedObject.setValue("OrangePi", forKey: "name")
+//        }
+//        
+//        newManagedObject.setValue(22, forKey: "port")
+//        newManagedObject.setValue("pi", forKey: "username")
+//        newManagedObject.setValue("raspberry", forKey: "password")
+//        
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "EEE M/d/YY 'at' h:mma" // superset of OP's format
+//        let str = dateFormatter.stringFromDate(NSDate())
+//        newManagedObject.setValue(str, forKey: "timeStampString")
+//        newManagedObject.setValue(NSDate.date(), forKey: "timeStamp")
+//        
+//        
+//        // Save the context.
+//        var error: NSError? = nil
+//        if !context.save(&error) {
+//            // Replace this implementation with code to handle the error appropriately.
+//            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//            //println("Unresolved error \(error), \(error.userInfo)")
+//            abort()
+//        }
+//        
+//        //LAUNCH THE ProfileViewController
+//        
+//        
+//    }
+    
+    
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -163,7 +205,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext)
+        let entity = NSEntityDescription.entityForName("OrangePi", inManagedObjectContext: self.managedObjectContext)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
@@ -177,7 +219,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "OrangePi")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "OrangePi666")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

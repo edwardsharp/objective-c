@@ -26,6 +26,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var connectButton: UIButton!
     
+    @IBOutlet weak var debugLabelShort: UILabel!
+    @IBOutlet var debugLabelLong: [UILabel]!
     
 //    
 //    let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -71,12 +73,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 
         // field validation: hide the connect button
         //using `connectButton.enabled = false`  is no me gusta, yay type-safety below:
-        if let button = connectButton { button.enabled = false }
+        if let button = connectButton { button.enabled = true }
         
         //        nameTextField.delegate = self
         //        addressTextField.delegate = self
-        if let nameDelegate = nameTextField     { nameDelegate.delegate = self }
-        if let nameDelegate = addressTextField  { nameDelegate.delegate = self }
+        if let nameDelegate = nameTextField         { nameDelegate.delegate = self }
+        if let nameDelegate = addressTextField      { nameDelegate.delegate = self }
+        if let nameDelegate = portTextField         { nameDelegate.delegate = self }
+        if let nameDelegate = usernameTextField     { nameDelegate.delegate = self }
+        if let nameDelegate = passwordTextField     { nameDelegate.delegate = self }
         
     }
     
@@ -98,24 +103,42 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         println("GOT textFieldDidBeginEditing!")
     }
     func textFieldShouldEndEditing(textField: UITextField!) -> Bool {
+        
+        println("GOT TEXT: "+textField.text)
+        println("GOT TAG: "+String(textField.tag))
+        let tag = textField.tag
+//        switch tag {
+//        case 1:
+//            //name
+//            "f"
+//        case 2:
+//            //address
+//            "b"
+//        case 3:
+//            //port
+//            ""
+//        case 4:
+//            //username
+//            ""
+//        case 5:
+//            //password
+//            ""
+//        }
+        
         println("GOT textFieldShouldEndEditing!")
-        if !textField.text.isEmpty{
-            println("GOT TEXT: "+textField.text)
-            println("GOT TAG: "+String(textField.tag))
-            println("SHOULD ENABLE connectButton!")
-            connectButton.enabled = true
-            //if let button = connectButton { button.enabled = true }
-        }
+        
+//        if !textField.text.isEmpty{
+//            //show the test buttion, i guess...
+//            connectButton.enabled = true
+//            //if let button = connectButton { button.enabled = true }
+//        }
+        
+        
         return true
     }
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         println("GOT textFieldShouldReturn!")
         textField.resignFirstResponder()
-        if !textField.text.isEmpty{
-            println("SHOULD ENABLE connectButton!")
-            connectButton.enabled = true
-            //if let button = connectButton { button.enabled = true }
-        }
         return true
     }
     //end UITextFieldDelegate methods

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ButtonCollectionViewCell: UICollectionViewCell {
+class ButtonCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     //@IBOutlet var imageView: UIImageView!
     

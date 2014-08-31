@@ -15,6 +15,7 @@
 		2BB961E519A954F40024D17F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB961E419A954F40024D17F /* Images.xcassets */; };
 		2BB961F119A954F50024D17F /* OrangePiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB961F019A954F50024D17F /* OrangePiTests.swift */; };
 		2BB9620319A971B50024D17F /* LauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9620219A971B50024D17F /* LauncherViewController.swift */; };
+		2BE31B6619B2CC2200A80D8F /* OrangePi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31B6519B2CC2200A80D8F /* OrangePi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		2BB961EF19A954F50024D17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB961F019A954F50024D17F /* OrangePiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePiTests.swift; sourceTree = "<group>"; };
 		2BB9620219A971B50024D17F /* LauncherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauncherViewController.swift; sourceTree = "<group>"; };
+		2BE31B6519B2CC2200A80D8F /* OrangePi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangePi.swift; sourceTree = "<group>"; };
+		2BE31B6719B2CE5200A80D8F /* OrangePi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OrangePi-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B6CFE7919B1895900C3695C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2BE31B6519B2CC2200A80D8F /* OrangePi.swift */,
+				2BE31B6719B2CE5200A80D8F /* OrangePi-Bridging-Header.h */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		2BB961CA19A954F40024D17F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		2BB961D519A954F40024D17F /* OrangePi */ = {
 			isa = PBXGroup;
 			children = (
+				2B6CFE7919B1895900C3695C /* models */,
 				2BB961D819A954F40024D17F /* AppDelegate.swift */,
 				2BB961DD19A954F40024D17F /* MasterViewController.swift */,
 				2BB961DF19A954F40024D17F /* DetailViewController.swift */,
@@ -220,6 +233,7 @@
 				2BB961DC19A954F40024D17F /* OrangePi.xcdatamodeld in Sources */,
 				2BB9620319A971B50024D17F /* LauncherViewController.swift in Sources */,
 				2BB961D919A954F40024D17F /* AppDelegate.swift in Sources */,
+				2BE31B6619B2CC2200A80D8F /* OrangePi.swift in Sources */,
 				2BB961DE19A954F40024D17F /* MasterViewController.swift in Sources */,
 				2BB961E019A954F40024D17F /* DetailViewController.swift in Sources */,
 			);
@@ -339,9 +353,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OrangePi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrangePi/OrangePi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +368,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OrangePi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OrangePi/OrangePi-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +430,7 @@
 				2BB961F619A954F50024D17F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BB961F719A954F50024D17F /* Build configuration list for PBXNativeTarget "OrangePiTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +439,7 @@
 				2BB961F919A954F50024D17F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

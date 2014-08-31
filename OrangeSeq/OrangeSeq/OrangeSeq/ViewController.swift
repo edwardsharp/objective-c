@@ -8,6 +8,8 @@
 
 import UIKit
 
+var staticItems = [String]()
+
 class ViewController: UIViewController, UIGestureRecognizerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var width = 320.0
@@ -119,6 +121,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UICollectio
         
         
         buttons = ["one", "two", "three", "four", "five", "six"]
+        
+        staticItems = ["", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", "","", "", "", ""]
     }
 
     func setYProgressViewRot(){
@@ -139,7 +143,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UICollectio
     //PRAGMA MARK - CollectionView stuffz
     func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int
     {
-        return buttons.count
+        return staticItems.count
     }
     
     func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell!
