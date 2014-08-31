@@ -165,7 +165,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("OrangePi", inManagedObjectContext: self.managedObjectContext)
+        let entity = NSEntityDescription.entityForName("UserPis", inManagedObjectContext: self.managedObjectContext)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.

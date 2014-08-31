@@ -15,7 +15,9 @@
 		2BB961E519A954F40024D17F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB961E419A954F40024D17F /* Images.xcassets */; };
 		2BB961F119A954F50024D17F /* OrangePiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB961F019A954F50024D17F /* OrangePiTests.swift */; };
 		2BB9620319A971B50024D17F /* LauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9620219A971B50024D17F /* LauncherViewController.swift */; };
-		2BE31B6619B2CC2200A80D8F /* OrangePi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31B6519B2CC2200A80D8F /* OrangePi.swift */; };
+		2BE31BAC19B3C7F800A80D8F /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31BAB19B3C7F800A80D8F /* CoreDataStore.swift */; };
+		2BE31BAE19B3C8A000A80D8F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31BAD19B3C8A000A80D8F /* CoreDataHelper.swift */; };
+		2BE31BB119B3CCA800A80D8F /* UserPi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31BB019B3CCA800A80D8F /* UserPi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,10 @@
 		2BB961EF19A954F50024D17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB961F019A954F50024D17F /* OrangePiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePiTests.swift; sourceTree = "<group>"; };
 		2BB9620219A971B50024D17F /* LauncherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauncherViewController.swift; sourceTree = "<group>"; };
-		2BE31B6519B2CC2200A80D8F /* OrangePi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangePi.swift; sourceTree = "<group>"; };
-		2BE31B6719B2CE5200A80D8F /* OrangePi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OrangePi-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BE31BAB19B3C7F800A80D8F /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		2BE31BAD19B3C8A000A80D8F /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		2BE31BAF19B3CCA700A80D8F /* OrangePi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OrangePi-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BE31BB019B3CCA800A80D8F /* UserPi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,8 @@
 		2B6CFE7919B1895900C3695C /* models */ = {
 			isa = PBXGroup;
 			children = (
-				2BE31B6519B2CC2200A80D8F /* OrangePi.swift */,
-				2BE31B6719B2CE5200A80D8F /* OrangePi-Bridging-Header.h */,
+				2BE31BB019B3CCA800A80D8F /* UserPi.swift */,
+				2BE31BAF19B3CCA700A80D8F /* OrangePi-Bridging-Header.h */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -93,6 +97,7 @@
 		2BB961D519A954F40024D17F /* OrangePi */ = {
 			isa = PBXGroup;
 			children = (
+				2BE31BAA19B3C7D200A80D8F /* util */,
 				2B6CFE7919B1895900C3695C /* models */,
 				2BB961D819A954F40024D17F /* AppDelegate.swift */,
 				2BB961DD19A954F40024D17F /* MasterViewController.swift */,
@@ -129,6 +134,15 @@
 				2BB961EF19A954F50024D17F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BE31BAA19B3C7D200A80D8F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				2BE31BAB19B3C7F800A80D8F /* CoreDataStore.swift */,
+				2BE31BAD19B3C8A000A80D8F /* CoreDataHelper.swift */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,12 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE31BAC19B3C7F800A80D8F /* CoreDataStore.swift in Sources */,
+				2BE31BAE19B3C8A000A80D8F /* CoreDataHelper.swift in Sources */,
 				2BB961DC19A954F40024D17F /* OrangePi.xcdatamodeld in Sources */,
 				2BB9620319A971B50024D17F /* LauncherViewController.swift in Sources */,
 				2BB961D919A954F40024D17F /* AppDelegate.swift in Sources */,
-				2BE31B6619B2CC2200A80D8F /* OrangePi.swift in Sources */,
 				2BB961DE19A954F40024D17F /* MasterViewController.swift in Sources */,
 				2BB961E019A954F40024D17F /* DetailViewController.swift in Sources */,
+				2BE31BB119B3CCA800A80D8F /* UserPi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

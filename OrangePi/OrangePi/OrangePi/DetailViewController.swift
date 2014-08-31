@@ -145,15 +145,39 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             break
         }
         
-//        detailItem?.saveContext()
         
+        //gotta do this sort of thing
+        //if let nameDelegate = passwordTextField     { nameDelegate.delegate = self }
+//        var error: NSError? = nil
+//        if !detailItem.save(&error) {
+//            println("saved!")
+//        }
+//       
+//        //hmm wish this were using the model object correctly...
+        //shdahdskjahskfhdfsjdhkdhfdkjhfakdjshfakdjhfsakdkfjdkjh
+        //is my xcdatata model foobarrr'dddd?????
+        //if let deet: AnyObject = detailItem { deet.saveContext() }
+        
+        if let aDelegate: AppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate { aDelegate.coredatahelper.saveContext() }
+        
+        
+        /*
+let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+let context: NSManagedObjectContext = appDelegate.managedObjectContext
+let entityName: String = "OrangePi"
+let myEntityDescription = NSEntityDescription.entityForName(entityName, inManagedObjectContext: context)
+var myObject = MyObject(entity: myEntityDescription, insertIntoManagedObjectContext: context)
+*/
+
         println("GOT textFieldShouldEndEditing & managedObjectContext?.save(nil)!")
-        
+
 //        if !textField.text.isEmpty{
 //            //show the test buttion, i guess...
 //            connectButton.enabled = true
 //            //if let button = connectButton { button.enabled = true }
 //        }
+        
+        
         
         
         return true
