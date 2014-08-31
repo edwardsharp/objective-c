@@ -44,6 +44,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    // managed core data objects stuffz
+    //this does not really work...
+//    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+//    var orangePi: OrangePi? = nil
+    
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: AnyObject = detailItem {
@@ -56,7 +62,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
                 name.text = detail.valueForKey("name").description
             }
             
-            //
             if let port = portTextField {
                 port.text = detail.valueForKey("port").description
             }
@@ -106,26 +111,43 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
         println("GOT TEXT: "+textField.text)
         println("GOT TAG: "+String(textField.tag))
+        println("should be title:"+self.title)
         let tag = textField.tag
-//        switch tag {
-//        case 1:
-//            //name
-//            "f"
-//        case 2:
-//            //address
-//            "b"
-//        case 3:
-//            //port
-//            ""
-//        case 4:
-//            //username
-//            ""
-//        case 5:
-//            //password
-//            ""
-//        }
+        switch tag {
+        case 1:
+            //name
+            detailItem?.setValue(textField.text, forKey: "name")
+            break
+        case 2:
+            //address
+            detailItem?.setValue(textField.text, forKey: "address")
+            break
+        case 3:
+    
+            if let number = textField.text.toInt() {
+                println("Got the port: \(number)")
+                detailItem?.setValue(number, forKey: "port")
+            } else {
+                println("Couldn't convert port text to a number")
+                detailItem?.setValue(22, forKey: "port")
+            }
+
+            break
+        case 4:
+            //username
+            detailItem?.setValue(textField.text, forKey: "username")
+            break
+        case 5:
+            //password
+            detailItem?.setValue(textField.text, forKey: "password")
+            break
+        default:
+            break
+        }
         
-        println("GOT textFieldShouldEndEditing!")
+//        detailItem?.saveContext()
+        
+        println("GOT textFieldShouldEndEditing & managedObjectContext?.save(nil)!")
         
 //        if !textField.text.isEmpty{
 //            //show the test buttion, i guess...
@@ -142,6 +164,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     //end UITextFieldDelegate methods
+
 
 }
 

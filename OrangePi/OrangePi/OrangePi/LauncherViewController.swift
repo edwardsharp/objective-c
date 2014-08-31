@@ -26,6 +26,7 @@ class LauncherViewController: UIViewController {
         if let detail: AnyObject = self.detailItem {
             if let label = self.detailDescriptionLabel {
                 label.text = detail.valueForKey("timeStamp").description
+                //#TODO: set more stuffz?
             }
         }
     }
