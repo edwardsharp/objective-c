@@ -29,16 +29,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObjectFromSender:")
+        
+        //init if there's no OrangePi objects yet (like on app first run)
+        if self.fetchedResultsController.fetchedObjects.count == 0 {
+            insertNewObject()
+        }
+        
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
         
-        //init if there's no OrangePi objects yet (like on app first run)
-        if self.fetchedResultsController.fetchedObjects.count == 0 {
-            insertNewObject()
-        }
     }
 
     override func didReceiveMemoryWarning() {

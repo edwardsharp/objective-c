@@ -29,6 +29,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var debugLabelShort: UILabel!
     @IBOutlet var debugLabelLong: [UILabel]!
     
+    @IBOutlet weak var barButtonSave: UIBarButtonItem!
 //    
 //    let notificationCenter = NSNotificationCenter.defaultCenter()
 //    let mainQueue = NSOperationQueue.mainQueue()
@@ -95,6 +96,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "Save")
+
         
     }
 
@@ -103,7 +106,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    //UITextFieldDelegate methods
+    // #PRAGMA MARK - UITextFieldDelegate methods
     func textFieldDidBeginEditing(textField: UITextField!) {
         println("GOT textFieldDidBeginEditing!")
     }
